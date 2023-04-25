@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from projects.models import Project
 
 # Create your views here.
 

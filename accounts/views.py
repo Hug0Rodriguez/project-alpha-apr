@@ -44,6 +44,6 @@ def signup(request):
                 login(request, user)
                 return redirect("list_projects")
     else:
-        form = SignUpForm
+        form = SignUpForm()
     context = {"form": form}
     return render(request, "accounts/signup.html", context)

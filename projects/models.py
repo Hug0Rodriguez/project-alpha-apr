@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django import forms
 
 # Create your models here.
 
@@ -13,3 +14,9 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ["name", "description", "owner"]

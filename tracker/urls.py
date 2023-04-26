@@ -28,4 +28,5 @@ urlpatterns = [
     path("projects/", include("projects.urls")),
     path("accounts/", include("accounts.urls")),
     path("", redirect_to_projects, name="home"),
+    path("tasks/", include("tasks.urls")),
 ]

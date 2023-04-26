@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from projects.models import Project
+from django import forms
 
 
 # Create your models here.
@@ -19,3 +20,9 @@ class Task(models.Model):
 
 def __str__(self):
     return self.name
+
+
+class TaskForm(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = ["name", "start_date", "due_date", "project", "assignee"]
